@@ -27,8 +27,3 @@ def narcissistic_function(num):
         num //= 10
         s += pow(digit, i)        
     return s
-
-
-if __name__=="__main__":
-    main()
-
