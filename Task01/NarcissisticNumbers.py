@@ -1,8 +1,3 @@
-
-def main():
-    print_narcissistic_numbers(1,1000)
-
-
 def print_narcissistic_numbers(minNumber, maxNumber):
     input_list = list(range(minNumber, maxNumber + 1))
     for input_Item in input_list:
@@ -27,5 +22,4 @@ def narcissistic_function(num):
         s += pow(digit, i)        
     return s
 
-
-main()
+print_narcissistic_numbers(1, 1000)
