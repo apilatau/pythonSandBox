@@ -4,7 +4,7 @@ def main():
 
 
 def print_narcissistic_numbers(minNumber, maxNumber):
-    input_list = list(range(minNumber, maxNumber+1))
+    input_list = list(range(minNumber, maxNumber + 1))
     for input_Item in input_list:
         if input_Item == narcissistic_function(input_Item):
             print(input_Item, end=" ")
