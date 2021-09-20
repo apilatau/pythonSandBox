@@ -26,6 +26,15 @@ def get_words_dict(words):
         else:
             words_dict[word] = 1
     return words_dict
+
+def get_index_text(word):
+    for sentence in text:
+        sentence_words = re.split(r'\W+', sentence.lower())        
+        try:
+            index_sentence = sentence_words.index(word)
+        except:
+            continue
+        return text.index(sentence)
  
  
 def main():
@@ -35,6 +44,7 @@ def main():
         
         print("word    count")
         for word in words_dict:
-             print(word.ljust(7), words_dict[word])
+            index_occerence = get_index_text(word)
+            print(word.ljust(7), words_dict[word], index_occerence)
 
 main()
