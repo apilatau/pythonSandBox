@@ -42,9 +42,9 @@ def main():
         words = get_words(text)
         words_dict = get_words_dict(words)
         
-        print("word    count")
+        print("word         count      occerence")
         for word in words_dict:
             index_occerence = get_index_text(word)
-            print(word.ljust(7), words_dict[word], index_occerence)
+            print(f"{word.ljust(7)}         {words_dict[word]}       {index_occerence}")
 
 main()
