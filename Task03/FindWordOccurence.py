@@ -30,11 +30,8 @@ def get_words_dict(words):
 def get_index_text(word):
     for sentence in text:
         sentence_words = re.split(r'\W+', sentence.lower())        
-        try:
-            index_sentence = sentence_words.index(word)
-        except:
-            continue
-        return text.index(sentence)
+        if word in sentence_words:
+            return text.index(sentence)
  
  
 def main():
