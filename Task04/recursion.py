@@ -1,5 +1,3 @@
-import unittest
-
 tree = {
         "node1": {
                     "node11": {
@@ -35,8 +33,7 @@ def recursion(item):
        if not isinstance(values,list):
            values.update(remove_current_item_dictionary(item))
            recursion(values)
-       else:
-           key = get_key_by_index(item, 0)
+       else:           
            [list_result.append(list_item) for list_item in values]
     print(list_result)
    except:
