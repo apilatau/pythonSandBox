@@ -27,6 +27,7 @@ def get_words_dict(words):
             words_dict[word] = 1
     return words_dict
 
+
 def get_index_text(word):
     for sentence in text:
         sentence_words = re.split(r'\W+', sentence.lower())        
