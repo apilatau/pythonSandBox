@@ -39,9 +39,9 @@ def main():
         words = get_words(text)
         words_dict = get_words_dict(words)
         
-        print("word         count      occerence")
+        print(f"{'word':10}{'count':<10}{'occurrence':>10}")
         for word in words_dict:
             index_occerence = get_index_text(word)
-            print(f"{word.ljust(7)}         {words_dict[word]}       {index_occerence}")
+            print(f"{word:<10}{words_dict[word]:<10}{index_occerence:<10}")
 
 main()
