@@ -10,18 +10,18 @@ def menu():
         try:           
            menu_number = int(input("Enter menu number: "))
         except:
-            print(f"You typed a character {menu_number} which could not be converted into integer")
+            print(f"You typed a character which could not be converted into integer")
+            continue
                 
         if menu_number == 1:
             Area = area_by_base_height()
         elif menu_number == 2:
             Area = area_by_2sides_angle()
         elif menu_number == 3:
+            print("Goodbye!")
             break
         print(f"Area is: {Area}")
-    
-    print("Goodbye!")
-
+        
 
 def area_by_base_height():
     try:        
@@ -29,6 +29,7 @@ def area_by_base_height():
         base, height = map(int, parameters.split(' '))
     except:
         print(f"You typed a character {parameters} which could not be converted into integer")
+        return
 
     return 0.5 * base * height
 
@@ -40,6 +41,7 @@ def area_by_2sides_angle():
         side1, side2, angle = map(int, parameters.split(' '))
     except:
         print(f"You typed a character {parameters} which could not be converted into integer")
+        return
     
     return 0.5 * side1 * side2 * math.sin(math.radians(angle))
 
