@@ -12,7 +12,7 @@ flat_tree = [1, 2, 3]
 
 
 def recursion(items):
-    if isinstance(items,dict):
+    if isinstance(items, dict):
         collector = list() 
         for value in items.values():
             collector.extend(recursion(value))
@@ -24,5 +24,5 @@ def recursion(items):
 expected_result_tree = [1, 2, 3, 31, 5, 31, 7, 8, 9]
 print(recursion(tree))
 print(recursion(flat_tree))
-assert recursion(tree) == expected_result_tree,"incorrect tree plot"
-assert recursion(flat_tree) == flat_tree,"incorrect tree plot"
+assert recursion(tree) == expected_result_tree, "incorrect tree plot"
+assert recursion(flat_tree) == flat_tree, "incorrect tree plot"
