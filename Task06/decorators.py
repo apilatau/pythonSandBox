@@ -5,8 +5,8 @@ def measure_elapsed_time(func):
         print(f"calling {func.__name__}")
         time_start = time.time()
         result = func(*args, **kwargs)
-        time_end = time.time()
-        print(f"{func.__name__} call took {round(time_end-time_start, 1)} seconds")
+        duration = time.time() - time_start
+        print(f"{func.__name__} call took {round(duration, 1)} seconds")
         return result
     return wrapper
 
