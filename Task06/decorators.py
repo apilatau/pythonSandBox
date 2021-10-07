@@ -2,6 +2,7 @@ import time
 
 def measure_elapsed_time(func):
     def wrapper(*args, **kwargs):
+        print(f"calling {func.__name__}")
         time_start = time.time()
         result = func(*args, **kwargs)
         time_end = time.time()
