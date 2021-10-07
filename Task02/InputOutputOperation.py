@@ -14,7 +14,7 @@ def menu():
             continue
                 
         if menu_number == 1:
-            Area = area_by_base_height()
+            area = area_by_base_height()
         elif menu_number == 2:
             area = area_by_2sides_angle()
         elif menu_number == 3:
