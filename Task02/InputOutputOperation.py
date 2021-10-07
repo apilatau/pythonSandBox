@@ -20,7 +20,7 @@ def menu():
         elif menu_number == 3:
             print("Goodbye!")
             break
-        print(f"Area is: {Area}")
+        print(f"Area is: {area}")
         
 
 def area_by_base_height():
