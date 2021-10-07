@@ -20,6 +20,8 @@ def menu():
         elif menu_number == 3:
             print("Goodbye!")
             break
+        else:
+            continue
         print(f"Area is: {area}")
         
 
