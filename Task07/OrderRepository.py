@@ -17,13 +17,13 @@ class OrderRepository:
         return None
 
     def list_orders(self, n_latest:int = None):        
-        listFor = list(self.__Orders)
+        list_for = list(self.__Orders)
         if n_latest is not None:
-            last_index = len(listFor)
-            for item in listFor[last_index-n_latest: last_index]:
+            last_index = len(list_for)
+            for item in list_for[last_index-n_latest: last_index]:
                 print(f"OrderId:{item.id} Order_date:{item.order_date} Order client_id:{item.client_id} Order.price:{item.price}")
         else:
-            for item in listFor:
+            for item in list_for:
                 print(f"OrderId:{item.id} Order_date:{item.order_date} Order client_id:{item.client_id} Order.price:{item.price}")
 
     def delete(self, order_id: uuid):
