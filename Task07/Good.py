@@ -5,24 +5,24 @@ class Good:
 
     @property
     def id(self):
-        return self.id
+        return self.__id
 
     @property
     def name(self):
-        return self.name
+        return self.__name
 
     @property
     def price(self):
-        return self.price
+        return self.__price
 
     @id.setter
-    def id(self, value: uuid):
-        self.id = value
+    def id(self, value):
+        self.__id = value
 
     @name.setter
     def name(self, value: str):
-        self.name = value
+        self.__name = value
 
     @price.setter
     def price(self, value: float):
-        self.price = value
+        self.__price = value
